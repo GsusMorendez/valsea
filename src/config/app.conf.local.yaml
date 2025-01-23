@@ -1,0 +1,6 @@
+App:
+  Address: ":3333"
+
+API:
+  BaseUri: "/api/v1"
+  TimeOutInSeconds: 60
