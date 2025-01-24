@@ -1,0 +1,185 @@
+{
+	"info": {
+		"_postman_id": "ceb2611a-17fc-4b32-ba6d-4291cd0de427",
+		"name": "Valsea",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "35235631"
+	},
+	"item": [
+		{
+			"name": "Account",
+			"item": [
+				{
+					"name": "AccountCreate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"owner\": \"Jesus Moreno\",\r\n        \"initial_balance\": 100.23\r\n    },\r\n    {\r\n        \"owner\": \"Juana Garcia\",\r\n        \"initial_balance\": -100.23\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3333/api/v1/accounts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"api",
+								"v1",
+								"accounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AccountDetails",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3333/api/v1/accounts/16320c70-e370-4545-ba40-062f1d7f1531",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"api",
+								"v1",
+								"accounts",
+								"16320c70-e370-4545-ba40-062f1d7f1531"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AccountList",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3333/api/v1/accounts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"api",
+								"v1",
+								"accounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TransactionCreate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": \"deposit\",\r\n    \"amount\": 1000.98\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3333/api/v1/accounts/16320c70-e370-4545-ba40-062f1d7f1531/transactions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"api",
+								"v1",
+								"accounts",
+								"16320c70-e370-4545-ba40-062f1d7f1531",
+								"transactions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TransactionsInAccount",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"type\": \"withdrawal\",\r\n        \"amount\": 100\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3333/api/v1/accounts/16320c70-e370-4545-ba40-062f1d7f1531/transactions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"api",
+								"v1",
+								"accounts",
+								"16320c70-e370-4545-ba40-062f1d7f1531",
+								"transactions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Transfer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"from_account_id\": \"2f4d7e6c-ab39-4831-bf1a-f1487ad32a5f\",\r\n    \"to_account_id\": \"3361c6aa-d446-4387-9d5f-92b5cf9f7255\",\r\n    \"amount\": 100100\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3333/api/v1/transfer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"api",
+								"v1",
+								"transfer"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
